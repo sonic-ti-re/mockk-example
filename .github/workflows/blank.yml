@@ -66,4 +66,4 @@ jobs:
           project: TIDEPLOY
           issuetype: Task
           summary: Test for create deployment issue ${{ github.repository }}
-          fields: '{"label": ["deployment", "resale-backoffice-api"]}'
+          fields: '{"labels": ["deployment", "resale-backoffice-api"]}'
