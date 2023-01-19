@@ -56,4 +56,13 @@ jobs:
           issuetype: Task
           description: "Created automatically via GitHub Actions"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}       
+          
+          
+      - name: Jira Create Issue
+        id: create
+        uses: atlassian/gajira-create@v3
+        with:
+          project: TIDEPLOY
+          issuetype: Task
+          summary: Test for create deployment issue ${{ github.repository }}
