@@ -39,7 +39,7 @@ jobs:
         run: |          
           curl --request POST \
             --url 'https://trenbe.atlassian.net/rest/api/2/issue' \
-            --user 'kwlee@trenbe.com:${{ screts.JIRA_API_TOKEN }}' \
+            --user 'kwlee@trenbe.com:${{ secrets.JIRA_API_TOKEN }}' \
             --header 'Accept: application/json' \
             --header 'Content-Type: application/json' \
             --data '{
