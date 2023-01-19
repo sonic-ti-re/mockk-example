@@ -67,30 +67,7 @@ jobs:
           # Key of the project
           project: "TIDEPLOY"
           # Type of the issue to be created. Example: 'Incident'
-          issuetype: "10092"
+          issuetype: "10002"
           # Issue summary
           summary: "Test Issue"
-          
-      - name: Run a Jira Create Issue Script
-        run: |          
-          curl --request POST \
-            --url 'https://trenbe.atlassian.net/rest/api/2/issue' \
-            --user 'kwlee@trenbe.com:${{ secrets.JIRA_API_TOKEN }}' \
-            --header 'Accept: application/json' \
-            --header 'Content-Type: application/json' \
-            --data '{
-            "fields": {
-              "summary": "Main order flow broken",
-              "project": {
-                  "key": "TIDEPLOY"
-              },
-              "issuetype": {
-                "id": "10092"
-              },
-              "labels": [
-                  "deployment",
-                  "resale-backoffice-api"
-              ],
-              "description": "Order entry fails when selecting supplier."
-            }
-          }'          
+      
