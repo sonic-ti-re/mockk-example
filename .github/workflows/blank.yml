@@ -52,22 +52,9 @@ jobs:
       - name: Jira TODO
         uses: atlassian/gajira-todo@v3
         with:
-          project: GA
+          project: TIDEPLOY
           issuetype: Task
-          description: Created automatically via GitHub Actions
+          summary: "Test Issue"          
+          description: "Created automatically via GitHub Actions"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
-
-
-      - name: Jira Create issue
-        # You may pin to the exact commit or the version.
-        # uses: atlassian/gajira-create@1ff0b6bd115a780592b47bfbb63fc4629132e6ec
-        uses: atlassian/gajira-create@v3
-        with:
-          # Key of the project
-          project: "TIDEPLOY"
-          # Type of the issue to be created. Example: 'Incident'
-          issuetype: "10002"
-          # Issue summary
-          summary: "Test Issue"
-      
