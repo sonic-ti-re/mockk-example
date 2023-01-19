@@ -54,7 +54,6 @@ jobs:
         with:
           project: TIDEPLOY
           issuetype: Task
-          summary: "Test Issue"          
           description: "Created automatically via GitHub Actions"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
