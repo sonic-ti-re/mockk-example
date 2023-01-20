@@ -64,8 +64,7 @@ jobs:
           description: "Created automatically via GitHub Actions"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}       
-          
-          
+              
       - name: Jira Create Issue
         id: create
         uses: atlassian/gajira-create@v3
