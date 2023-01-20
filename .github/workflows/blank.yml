@@ -43,7 +43,7 @@ jobs:
         # uses: atlassian/gajira-cli@7b8487d76cd88bf5d50ba00c6cca6edff1ddd507
         uses: atlassian/gajira-cli@v3
 
-  deployment-calendar:
+  deployment_calendar:
     runs-on: ubuntu-latest
 
     steps:
