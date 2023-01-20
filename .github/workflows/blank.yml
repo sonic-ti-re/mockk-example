@@ -68,4 +68,4 @@ jobs:
         uses: atlassian/gajira-transition@master
         with:
           issue: ${{ steps.create.outputs.issue }}
-          transition: "Resolved"          
+          transition: "완료"          
