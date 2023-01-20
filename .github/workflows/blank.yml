@@ -44,6 +44,7 @@ jobs:
         uses: atlassian/gajira-cli@v3
 
   deployment_calendar:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
