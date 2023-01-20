@@ -34,17 +34,18 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
-      - name: Setup Jira
-        # You may pin to the exact commit or the version.
-        # uses: atlassian/gajira-cli@7b8487d76cd88bf5d50ba00c6cca6edff1ddd507
-        uses: atlassian/gajira-cli@v3
 
   deployment_calendar:
     needs: build
     runs-on: ubuntu-latest
 
     steps:
+              
+      - name: Setup Jira
+        # You may pin to the exact commit or the version.
+        # uses: atlassian/gajira-cli@7b8487d76cd88bf5d50ba00c6cca6edff1ddd507
+        uses: atlassian/gajira-cli@v3
+
       - name: Jira Login
         # You may pin to the exact commit or the version.
         # uses: atlassian/gajira-login@ca13f8850ea309cf44a6e4e0c49d9aa48ac3ca4c
@@ -53,13 +54,6 @@ jobs:
             JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
             JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
             JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
-
-      - name: Jira TODO
-        uses: atlassian/gajira-todo@v3
-        with:
-          project: TIDEPLOY
-          issuetype: Task
-          description: "Created automatically via GitHub Actions"
 
       - name: Jira Create Issue
         id: create
