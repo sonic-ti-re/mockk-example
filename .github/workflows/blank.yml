@@ -73,4 +73,4 @@ jobs:
           project: TIDEPLOY
           issuetype: Task
           summary: Test for create deployment issue ${{ github.repository }}
-          fields: '{"labels": ["deployment", ${{ role }} ]}'
+          fields: '{"labels": ["deployment", ${{ env.role }} ]}'
